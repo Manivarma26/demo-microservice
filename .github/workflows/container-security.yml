@@ -1,0 +1,12 @@
+name: "Container Security & Compliance"
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  security-scan:
+    uses: Manivarma26/container-hardening-factory/.github/workflows/container-promote.yml@main
+    with:
+      image_name: demo-microservice:latest
